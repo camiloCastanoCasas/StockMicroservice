@@ -1,5 +1,6 @@
 package com.microservice.stock.infrastructure.documentation;
 
+import com.microservice.stock.infrastructure.constants.DocumentationConstants;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import io.swagger.v3.oas.models.Components;
@@ -15,11 +16,11 @@ public class OpenApiConfiguration {
         return new OpenAPI()
                 .components(new Components())
                 .info(new Info()
-                        .title("Stock Microservice")
-                        .version("v1.0.0")
-                        .description("Stock Microservice")
-                        .termsOfService("http://swagger.io/terms/")
-                        .license(new License().name("Apache 2.0").url("http://springdoc.org"))
+                        .title(DocumentationConstants.TITTLE)
+                        .version(DocumentationConstants.VERSION)
+                        .description(DocumentationConstants.DESCRIPTION)
+                        .termsOfService(DocumentationConstants.TERMS_OF_SERVICE)
+                        .license(new License().name(DocumentationConstants.LICENSE_NAME).url(DocumentationConstants.LICENSE_URL))
                 );
     }
 }
